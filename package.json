@@ -1,0 +1,40 @@
+{
+  "name": "piggybank-extension",
+  "version": "1.0.0",
+  "description": "A Bitcoin piggy bank for children",
+  "main": "background.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js",
+    "package": "zip -r piggybank-extension.zip . -x \"node_modules/*\" -x \".git/*\" -x \"src/*\" -x \"package-lock.json\""
+  },
+  "keywords": [
+    "bitcoin",
+    "lightning",
+    "alby",
+    "extension",
+    "piggybank",
+    "children"
+  ],
+  "author": "Jason Branscum",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "qrcode.react": "^3.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
+    "react-youtube": "^10.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
