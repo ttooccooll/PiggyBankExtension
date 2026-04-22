@@ -1,6 +1,6 @@
 # PiggyBank - Bitcoin Savings for Kids
 
-A Bitcoin piggy bank for children to track their savings and learn about Bitcoin. The PiggyBank extension works with the Alby Browser Extension to provide a kid-friendly interface for Bitcoin education and savings.
+A Bitcoin piggy bank for children to track their savings and learn about Bitcoin. PiggyBank is fully compatible with the Alby Hub store and Alby Browser Extension, providing a kid-friendly interface for Bitcoin education and savings.
 
 ## Features
 
@@ -8,10 +8,19 @@ A Bitcoin piggy bank for children to track their savings and learn about Bitcoin
 - **Bitcoin Education**: Built-in links to educational resources about Bitcoin, finance, history, and math
 - **Real-time Network Stats**: See up-to-date Bitcoin network information
 - **Fun Interface**: Kid-friendly UI with sound effects and interactive elements
+- **Alby Hub Compatible**: Fully integrated with Alby Hub for seamless wallet connection
 
 ## Installation
 
-### For Users
+### For Users - Alby Hub Store (Recommended)
+
+1. Navigate to [Alby Hub](https://albyhub.com/)
+2. Sign in to your Alby Hub account (or create one)
+3. Visit the Alby Hub store
+4. Find and install "Bitcoin Piggy Bank"
+5. Access PiggyBank directly from your Alby Hub dashboard
+
+### For Users - Browser Extension
 
 1. Install the Alby browser extension from [getalby.com](https://getalby.com)
 2. Set up your Alby wallet or connect an existing Lightning wallet
@@ -61,6 +70,17 @@ This extension uses:
 - React for the UI
 - WebLN for Lightning Network integration
 - Alby's WebExtension API
+
+### Alby Hub Compatibility
+
+PiggyBank is designed to be fully compatible with the Alby Hub store. The key integration points are:
+
+1. **WebLN API**: Uses the standardized WebLN API for Lightning Network functionality
+2. **Alby Hub Detection**: Automatically detects and uses Alby Hub's WebLN provider when available
+3. **Manifest Configuration**: Includes the required `alby` section in manifest.json with all necessary permissions
+4. **No Environment Dependencies**: No need for .env files as authentication happens through Alby's extension or Hub
+
+To submit this extension to the Alby Hub Store, follow the guidelines at [How to submit new app to Hub's Store](https://github.com/getAlby/hub/wiki/How-to:-submit-new-app-to-Hub's-Store).
 
 ## Contributing
 

@@ -75,15 +75,19 @@ function App() {
       try {
         console.log("Initializing WebLN...");
         
-        // Try to get WebLN from the Alby extension
-        if (window.webln) {
-          await window.webln.enable();
-          setWebln(window.webln);
-        } else if (window.alby && window.alby.webln) {
+        // First, try to get WebLN from Alby Hub's environment (for Hub integration)
+        if (window.alby && window.alby.webln) {
+          console.log("Using Alby Hub WebLN provider");
           await window.alby.webln.enable();
           setWebln(window.alby.webln);
+        } 
+        // Then try standard WebLN (for extension)
+        else if (window.webln) {
+          console.log("Using WebLN provider");
+          await window.webln.enable();
+          setWebln(window.webln);
         } else {
-          throw new Error("No WebLN provider found. Please install Alby extension.");
+          throw new Error("No WebLN provider found. Please install Alby extension or access through Alby Hub.");
         }
         
         setLoading(false);

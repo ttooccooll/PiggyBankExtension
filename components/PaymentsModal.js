@@ -40,6 +40,8 @@ const PaymentsModal = ({ modalState, setModalState, webln }) => {
       const response = await webln.makeInvoice({
         amount: amountSats,
         defaultMemo: memo || "PiggyBank deposit",
+        // Adding extra parameters for better Alby Hub compatibility
+        description: memo || "PiggyBank deposit"
       });
 
       if (response && response.paymentRequest) {

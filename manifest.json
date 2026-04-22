@@ -48,7 +48,13 @@
     "permissions": [
       "webln:getinfo",
       "webln:getbalance",
-      "webln:listpayments"
-    ]
+      "webln:listpayments",
+      "webln:makeinvoice",
+      "webln:sendpayment",
+      "webln:listtransactions"
+    ],
+    "categories": ["education", "kids", "wallet"],
+    "version": "1.0.0",
+    "author": "Jason Branscum"
   }
 }
